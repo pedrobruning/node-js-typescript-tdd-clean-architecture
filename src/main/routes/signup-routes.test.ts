@@ -11,7 +11,7 @@ afterAll(async () => {
 })
 
 beforeEach(async () => {
-  const accountCollection = MongoHelper.getConnection('accounts')
+  const accountCollection = MongoHelper.getCollection('accounts')
   await accountCollection.deleteMany({})
 })
 
