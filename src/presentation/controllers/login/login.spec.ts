@@ -4,14 +4,12 @@ import { EmailValidator } from '../signup/signup-protocols'
 import { LoginController } from './login'
 import { HttpRequest } from '../../protocols'
 
-const makeFakeRequest = (): HttpRequest => {
-  return {
-    body: {
-      email: 'any_email@email.com',
-      password: 'any_password'
-    }
+const makeFakeRequest = (): HttpRequest => ({
+  body: {
+    email: 'any_email@email.com',
+    password: 'any_password'
   }
-}
+})
 
 const makeEmailValidator = (): EmailValidator => {
   class EmailValidatorStub implements EmailValidator {
