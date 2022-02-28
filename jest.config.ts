@@ -2,10 +2,12 @@ export default {
   collectCoverage: false,
   collectCoverageFrom: [
     '<rootDir>/src/**/*.ts',
-    '!<rootDir>/src/main/**'
+    '!<rootDir>/src/main/**',
+    '!<rootDir>/src/**/*protocols/**',
+    '!<rootDir>/src/**/*-protocols.ts'
   ],
   coverageDirectory: "coverage",
-  coverageProvider: "v8",
+  coverageProvider: "babel",
   preset: '@shelf/jest-mongodb',
   roots: [
     "<rootDir>/src"
